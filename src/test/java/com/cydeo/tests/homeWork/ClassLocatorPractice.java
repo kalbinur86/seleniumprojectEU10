@@ -24,12 +24,20 @@ public class ClassLocatorPractice {
 
         //4- Verify title is as expected:
         //Expected: Practice
+        String expectedTitle1 = "Practice";
+        String actuallyTitle1 = driver.getTitle();
 
-
+        if (actuallyTitle1.equals(expectedTitle1)) {
+            System.out.println("Title verification PASSED!");
+        } else {
+            System.out.println("Title verification FAILED!");
+        }
 
         //PS: Locate “Home” link using “className” locator
+        WebElement usernameInput = driver.findElement(By.className("Home"));
+        usernameInput.sendKeys("Home");
 
-
+        driver.close();
 
 
     }

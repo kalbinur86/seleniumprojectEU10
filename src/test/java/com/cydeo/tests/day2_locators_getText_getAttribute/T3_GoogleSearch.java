@@ -12,7 +12,7 @@ public class T3_GoogleSearch {
     public static void main(String[] args) {
 
        // TC#3: Google search
-        //1- Open a chrome browser
+        //1- Open a Chrome browser
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -24,7 +24,7 @@ public class T3_GoogleSearch {
         //3- Write “apple” in search box
         //4- Click google search button (press Enter using Keys.ENTER)
         WebElement googleSearchBox = driver.findElement(By.name("q"));
-        googleSearchBox.sendKeys("apple"+ Keys.ENTER);
+        googleSearchBox.sendKeys("apple"+ Keys.TAB);
 
 
         //5- Verify title:

@@ -22,11 +22,14 @@ public class EtsyTitleVerification {
         // 2. Go to https://www.etsy.com
         driver.get("https://www.etsy.com");
 
+        Thread.sleep(1500);
         // 3. Search for “wooden spoon”
-        WebElement searchBox = driver.findElement(By.name("search_query"));
+        //WebElement searchBox = driver.findElement(By.name("search_query"));
+        WebElement searchBox = driver.findElement(By.id("global-enhancements-search-query"));
         searchBox.sendKeys("wooden spoon"+ Keys.ENTER);
 
 
+        Thread.sleep(1500);
         // 4. Verify title:
         // Expected: “Wooden spoon | Etsy
         String expectedTitle = "Wooden spoon | Etsy";
@@ -38,5 +41,6 @@ public class EtsyTitleVerification {
             System.out.println("Title verification FAILED!");
         }
 
+      driver.close();
     }
 }

@@ -21,6 +21,7 @@ public class ClassLocatorPractice {
 
         //3- Click to “Home” link
         WebElement homeLink = driver.findElement(By.className("nav-link"));
+        homeLink.click();
 
         //4- Verify title is as expected:
         //Expected: Practice
@@ -34,8 +35,6 @@ public class ClassLocatorPractice {
         }
 
         //PS: Locate “Home” link using “className” locator
-        WebElement usernameInput = driver.findElement(By.className("Home"));
-        usernameInput.sendKeys("Home");
 
         driver.close();
 

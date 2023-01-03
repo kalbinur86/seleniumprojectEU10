@@ -1,6 +1,7 @@
 package com.cydeo.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -16,7 +17,7 @@ public class WebDriverFactory {
     // -if "firefox" passed --> it will open firefox browser
     //RETURN TYPE : "WebDriver"
 
-    public static Object getDriver(String browserType) {
+    public static WebDriver getDriver(String browserType) {
 
         if (browserType.equalsIgnoreCase("chrome")) {
 

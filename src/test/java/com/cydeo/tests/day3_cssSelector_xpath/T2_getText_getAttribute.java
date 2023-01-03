@@ -18,9 +18,11 @@ public class T2_getText_getAttribute {
 
 
        // 3- Verify “remember me” label text is as expected:ü
-        // Expected: Remember me on this computer
+       // Expected: Remember me on this computer
        WebElement rememberMeLabel = drive.findElement(By.className("login-item-checkbox-label"));
 
+       String expectedRememberMeLabel = " Remember me on this computer";
+       String actualRememberMeLabel = rememberMeLabel.getText();
 
        // 4- Verify “forgot password” link text is as expected:
        // Expected: Forgot your password?

@@ -21,10 +21,17 @@ public class T3_getAttribute_cssSelector {
        // Expected: Log In
       //  WebElement signInButton =  driver.findElement(By.className("login-btn"));
 
-       //   tagName[attribute='value'] // as below
-       //     input[class='login-btn']
 
-        WebElement signInButton = driver.findElement(By.cssSelector("input[class='login-btn']"));
+    // locating the same web element using different attribute value.
+        //               tagName[attribute='value'] // as below
+        //               input[class='login-btn']
+        //or             input[type='submit']
+        //or             input[value='log In']
+
+    //  WebElement signInButton = driver.findElement(By.cssSelector("input[class='login-btn']"));
+    //  WebElement signInButton = driver.findElement(By.cssSelector("input[type='submit']"));
+        WebElement signInButton = driver.findElement(By.cssSelector("input[value='log In']"));
+
 
        // PS: Inspect and decide which locator you should be using to locate web
        // elements.

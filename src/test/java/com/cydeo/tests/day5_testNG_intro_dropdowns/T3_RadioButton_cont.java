@@ -45,7 +45,6 @@ public class T3_RadioButton_cont {
             String eachId = each.getAttribute("id");
 
             if (eachId.equals(idValue)){
-
                 each.click();
                 System.out.println( eachId + " is selected : " + each.isSelected());
                 break;

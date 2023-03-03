@@ -26,12 +26,15 @@ public class T3_CRM_LOGIN {
     @Test
     public void crm_login_test() {
 
-        //2. Go to : https://login.nextbasecrm.com
-        driver.get("https://login.nextbasecrm.com");
+        //2. Go to : https://login.nextbasecrm.com/
+        driver.get("https://login.nextbasecrm.com/");
 
         //3. Enter valid username
         WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
+        inputUsername.sendKeys("helpdesk1@cybertekschool.com");
 
+        //helpdesk1@cybertekschool.com  UserUser
+        //Helpdesk2@cybertekschool.com  UserUser
 
         //4. Enter valid password
         WebElement inputPassword = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
@@ -39,8 +42,8 @@ public class T3_CRM_LOGIN {
 
 
         //5. Click to log in button
-        WebElement inputLoginButton = driver.findElement(By.xpath("input[@value='Log In']"));
-        inputLoginButton.click();
+        WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
+        loginButton.click();
 
         //6. Verify title is as expected:
         //Expected Portal
